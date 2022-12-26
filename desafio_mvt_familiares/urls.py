@@ -15,11 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from desafio_mvt_familiares.views import create_parent, list_parents
+from desafio_mvt_familiares.views import create_parent, list_parents,delete_all
 
 urlpatterns = [
     
-    path('mostrar/' , create_parent),
+    path('crear/' , create_parent),
     path('lista/', list_parents),
+    path('borrar/', delete_all)
 
 ]

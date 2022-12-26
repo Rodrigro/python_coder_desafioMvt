@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Desafio Coder MVT</title>
+</head>
+<body>
+    <h1>Listado de Personas</h1>
+
+    {% for i in persona %}
+
+    <div class="card">
+        <div class="card-header">
+          
+      </div>
+        <div class="card-body">
+          <h3 class="card-title">Resultado</h3>
+          <h4 class="card-text">Nombre: {{i.name}}.</h4>
+          <h4>Documento: {{i.identification}}</h4>
+          {% if i.is_parent == True %}
+          <p>Es Familiar</p>
+          {% else %}
+          <p>No Son Familiares, pueden ser amigos</p>
+          {% endif %}   
+        </div>
+        
+      </div>
+      
+        
+
+       
+
+    {% endfor %}
+    
+</body>
+</html>
